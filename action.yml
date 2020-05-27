@@ -1,0 +1,16 @@
+name: "Apply"
+description: "Run kubectl apply on the specified resources"
+inputs:
+  manifest:
+    description: 'Path to the Kubernetes manifest. Can be a file or a directory'
+    required: false
+    default: 'k8s.yml'
+  namespace:
+    description: 'If present, the namespace scope for this action. If not specified, it will use the current context'
+    required: false
+runs:
+  using: "docker"
+  image: "Dockerfile"
+  args:
+    - ${{ inputs.manifest }}
+    - ${{ inputs.namespace }}
