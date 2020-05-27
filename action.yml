@@ -1,4 +1,4 @@
-name: "Apply"
+name: "Okteto Apply"
 description: "Run kubectl apply on the specified resources"
 inputs:
   manifest:
@@ -14,3 +14,6 @@ runs:
   args:
     - ${{ inputs.manifest }}
     - ${{ inputs.namespace }}
+branding:
+  icon: 'check-circle'  
+  color: 'green'
