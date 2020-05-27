@@ -1,4 +1,4 @@
-name: "Okteto Apply"
+name: "Kubectl Apply"
 description: "Run kubectl apply on the specified resources"
 inputs:
   manifest:
