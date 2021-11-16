@@ -21,7 +21,7 @@ Path to the Kubernetes manifest. Can be a file or a directory. It defaults to `k
 
 ## Example usage
 
-This example runs the login action, activates a namespace and creates a deployment.
+This example runs the context action, activates a namespace and creates a deployment.
 
 ```yaml
 # File: .github/workflows/workflow.yml
@@ -37,17 +37,17 @@ jobs:
     - name: checkout
       uses: actions/checkout@master
       
-    - uses: okteto/login@master
+    - uses: okteto/context@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - name: "Activate personal namespace"
-      uses: okteto/namespace@master
+      uses: okteto/namespace@latest
       with:
         name: cindylopez
 
     - name: "Create deployment"
-      uses: okteto/apply@master
+      uses: okteto/apply@latest
       with:
         manifest: deployment.yaml
 ```
