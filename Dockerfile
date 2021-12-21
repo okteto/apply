@@ -1,4 +1,4 @@
-FROM okteto/okteto:1.14.9
+FROM okteto/okteto:1.14.10
 
 COPY entrypoint.sh /entrypoint.sh
 
